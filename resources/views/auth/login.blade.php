@@ -12,7 +12,7 @@
             margin: 0 10px;
         }
     </style>
-    <form class="tf-form" method="POST">
+    <form class="tf-form" action="{{ route('login.authenticate') }}" method="POST">
         @csrf
         <h1>{{ $title }}</h1>
         <div class="group-input">
@@ -52,16 +52,16 @@
         <div class="col">
             <div class="auth-line">Face Recognition</div>
             <ul class="bottom socials-login mb-4">
-                <li><a href="#">Absen Masuk</a></li>
-                <li><a href="#">Absen Pulang</a></li>
+                <li><a href="{{ route('attendance.checkin.face') }}">Absen Masuk</a></li>
+                <li><a href="{{ route('attendance.checkout.face') }}">Absen Pulang</a></li>
             </ul>
         </div>
         <div class="separator"></div>
         <div class="col">
             <div class="auth-line">Qr Code</div>
             <ul class="bottom socials-login mb-4">
-                <li><a href="#">Absen Masuk</a></li>
-                <li><a href="#">Absen Pulang</a></li>
+                <li><a href="{{ route('attendance.checkin.qr') }}">Absen Masuk</a></li>
+                <li><a href="{{ route('attendance.checkout.qr') }}">Absen Pulang</a></li>
             </ul>
         </div>
     </div>
