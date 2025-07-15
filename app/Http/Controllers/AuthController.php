@@ -16,6 +16,13 @@ class AuthController extends Controller
         ]);
     }
 
+    public function showAdminLoginForm()
+    {
+        return view('auth.login_admin',[
+            "title" => "Admin Log In"
+        ]);
+    }
+
     public function authenticate(Request $request)
     {
         date_default_timezone_set('Asia/Jakarta');
